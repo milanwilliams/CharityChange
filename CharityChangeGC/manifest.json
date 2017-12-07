@@ -1,0 +1,35 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "CharityChange",
+  "version": "1.0",
+
+  // Recommended
+  "description": "CharityChange rounds your purchases up to the nearest dollar and donates the remainder to charity",
+
+  // Connects to the JS
+  "background" : {
+    "scripts": ["background.js"],
+    "persistent": true
+ },
+
+
+  // Page Action; currently designed for select pages
+  "page_action": {
+    "default_title": "Donate here!",      // Hover icon message
+    "default_popup": "popup.html"
+  },
+
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+
+// Optional, permissions that allow access to Chrome elements
+"permissions": [ "tabs","storage","activeTab", "http://*/*", "https://*/*", "contextMenus", "notifications", "webRequest", "webRequestBlocking", "declarativeContent" ],
+
+// Detail the scripts used
+"content_scripts": [{
+  "js": ["inject.js" ],
+  "matches": [ "http://*/*", "https://*/*" ],
+  "run_at": "document_start" }]
+}

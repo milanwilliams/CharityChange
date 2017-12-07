@@ -1,0 +1,34 @@
+
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>CharityChange</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+        white-space: nowrap;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1> <span style="color:#f5b82e">CharityChange</span></h1>
+    <p>Unsure where to donate? Try our <span style="color:#f5b82e">Charity of the Month!</span></p>
+    <iframe src="https://donate.sacredheartcs.org/checkout/donation?eid=53813"></iframe>
+  </body>
+</html>
