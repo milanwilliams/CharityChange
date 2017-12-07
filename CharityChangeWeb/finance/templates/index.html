@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<!-- Found the striped table from W3Schools -->
+
+<h1>Welcome to <span style="color:#f5b82e;font-weight:bold"> CharityChange</span>! Make a donation to make a difference! Change the world with your <span style="color:#f5b82e;font-weight:bold">change</span>! </h1>
+
+<table class="table table-striped" style="width:100%">
+      <tr>
+        <th>Charity</th>
+        <th>Amount</th>
+      </tr>
+    {% for transaction in transactions %}
+      <tr>
+        <td>{{ transaction.charity }}</td>
+        <td>{{ transaction.amount }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}

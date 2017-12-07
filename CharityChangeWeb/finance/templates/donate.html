@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Donate
+{% endblock %}
+
+{% block main %}
+    <form action="/donate" method="post">
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="firstname" placeholder="First Name" type="text"/>
+        </div>
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="lastname" placeholder="Last Name" type="text"/>
+        </div>
+
+         <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="charity" placeholder="Charity Name" type="text"/>
+        </div>
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="amount" placeholder="Amount" type="numeric"/>
+        </div>
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="address" placeholder="Address" type="text"/>
+        </div>
+
+         <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="cardnumber" placeholder="Card Number" type="text"/>
+        </div>
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="cardtype" placeholder="Card Type" type="text"/>
+        </div>
+
+         <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="cvc" placeholder="CVC" type="text"/>
+        </div>
+
+         <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="expirdate" placeholder="Expiration Date" type="text"/>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit!</button>
+
+    </form>
+
+{% endblock %}
